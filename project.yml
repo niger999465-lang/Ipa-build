@@ -1,0 +1,22 @@
+name: FilePatcher
+options:
+  bundleIdPrefix: com.example
+targets:
+  FilePatcher:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - FilePatcherApp.swift
+    info:
+      path: Info.plist
+      properties:
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+        UILaunchScreen: {}
+        CFBundleDisplayName: File Patcher
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.filepatcher
+        SWIFT_VERSION: "5.0"
+        CODE_SIGNING_ALLOWED: "NO"
